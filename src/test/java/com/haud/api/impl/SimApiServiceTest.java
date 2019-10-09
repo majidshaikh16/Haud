@@ -3,7 +3,6 @@ package com.haud.api.impl;
 import com.haud.TelecomApplication;
 import com.haud.entity.Sim;
 import com.haud.repository.SimRepository;
-import static  org.junit.Assert.assertEquals;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
@@ -13,6 +12,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+import static org.junit.Assert.assertEquals;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest
@@ -34,8 +35,8 @@ public class SimApiServiceTest {
         Mockito.when(simRepository.save(Mockito.any(Sim.class)))
                 .thenReturn(sim);
         Sim response = simService.createSim(sim);
-        assertEquals("Sim1",response.getName());
-        assertEquals(Long.valueOf(1),response.getId());
+        assertEquals("Sim1", response.getName());
+        assertEquals(Long.valueOf(1), response.getId());
     }
 
     @Test
@@ -43,6 +44,6 @@ public class SimApiServiceTest {
         Mockito.when(simRepository.existsById(Mockito.anyLong()))
                 .thenReturn(Boolean.TRUE);
         boolean simExists = simService.isSimExists(Mockito.anyLong());
-        assertEquals(Boolean.TRUE,simExists);
+        assertEquals(Boolean.TRUE, simExists);
     }
 }

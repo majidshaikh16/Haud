@@ -27,6 +27,7 @@ public class SimServiceImpl implements SimService {
 
     /**
      * Check if the sim exists
+     *
      * @param simId
      * @return
      */

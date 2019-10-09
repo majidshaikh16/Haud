@@ -45,7 +45,7 @@ public class CustomerServiceImpl implements CustomerService {
     @Transactional
     @Override
     public Customer linkSim(long custId, long simId) {
-        if (!isSimAlreadyMapped(custId,simId)){
+        if (!isSimAlreadyMapped(custId, simId)) {
             Customer customer = customerRepository.findById(custId).get();
             customer.getSims().add(simRepository.findById(simId).get());
             return customer;
@@ -69,6 +69,7 @@ public class CustomerServiceImpl implements CustomerService {
 
     /**
      * Check is the given customer id exists
+     *
      * @param custId
      * @return
      */
@@ -79,12 +80,13 @@ public class CustomerServiceImpl implements CustomerService {
 
     /**
      * Verify is the sim is already mapped to the customer
+     *
      * @param custId
      * @param simId
      * @return
      */
     private boolean isSimAlreadyMapped(long custId, long simId) {
-        return customerRepository.existsByIdAndSimsId(custId,simId);
+        return customerRepository.existsByIdAndSimsId(custId, simId);
     }
 
 

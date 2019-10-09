@@ -12,8 +12,8 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @SpringBootApplication
 public class TelecomApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(TelecomApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(TelecomApplication.class, args);
+    }
 
 }

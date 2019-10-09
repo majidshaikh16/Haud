@@ -2,8 +2,6 @@ package com.haud.api.impl.config;
 
 import com.haud.api.impl.CustomerService;
 import com.haud.api.impl.SimService;
-import com.haud.repository.CustomerRepository;
-import com.haud.repository.SimRepository;
 import org.mockito.Mockito;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

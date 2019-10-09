@@ -7,7 +7,10 @@ import com.haud.entity.Customer;
  */
 public interface CustomerService {
     Customer createCustomer(Customer customer);
-    Customer linkSim(long custId,long simId);
+
+    Customer linkSim(long custId, long simId);
+
     Customer getCustomer(long custId);
+
     boolean isCustomerExists(long custId);
 }

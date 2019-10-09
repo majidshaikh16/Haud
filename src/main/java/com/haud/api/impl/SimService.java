@@ -7,5 +7,6 @@ import com.haud.entity.Sim;
  */
 public interface SimService {
     Sim createSim(Sim sim);
+
     boolean isSimExists(long simId);
 }

@@ -29,16 +29,17 @@ public class SimApi {
 
     public SimApi(@Autowired SimService simService) {
         Request.simService = simService;
-        this.simService=simService;
+        this.simService = simService;
     }
 
     /**
      * Creates a new sim entity
+     *
      * @param simDto
      * @return
      */
     @PostMapping(path = "/create")
-    @ApiOperation(value = "Create a sim entity", response = CreateSimRequestDto  .class)
+    @ApiOperation(value = "Create a sim entity", response = CreateSimRequestDto.class)
     public ResponseEntity<SimDto> createCustomer(@RequestBody SimDto simDto) {
         Request.verifySimPostRequest(simDto);
         Sim sim = DtoMapper.toSim(simDto);

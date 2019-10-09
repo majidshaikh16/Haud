@@ -24,9 +24,10 @@ import org.springframework.web.bind.annotation.*;
 public class CustomerApi {
 
     private CustomerService customerService;
+
     public CustomerApi(@Autowired CustomerService customerService) {
         Request.customerService = customerService;
-        this.customerService=customerService;
+        this.customerService = customerService;
     }
 
     /**
